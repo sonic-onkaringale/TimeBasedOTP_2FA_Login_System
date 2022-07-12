@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<table>
+    <tr>
+        <td><h4>Email ID: </h4></td>
+        <td><h4 th:text="${email}"></h4></td>
+    </tr>
+    <tr>
+        <td><h4>QRCODE: </h4></td>
+        <td><img th:src="@{'data:image/png;base64,'+${qrcode}}"></td>
+    </tr>
+    <td><h4>LogIn </h4></td>
+    <td><h4><a th:href="@{/login}">Login</a></h4></td>
+</table>
+</html>

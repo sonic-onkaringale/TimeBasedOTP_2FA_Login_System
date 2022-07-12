@@ -1,0 +1,19 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Index Page</title>
+</head>
+<body>
+<h1 th:text="${session.email}==null?' ':'Congratulations You Are Logged In.'"></h1>
+<p >
+<h3><a th:href="@{/login}">Login</a></h3>
+<h3><a th:href="@{/register}">Register</a></h3>
+
+<div th:text="${session.email}==null?' ':'Logged in User '+${session.email}"></div>
+
+<h3><a th:href="@{/logout}" th:if="${session.containsKey('email')}">Logout</a></h3>
+
+</p>
+
+
+</body>
+</html>

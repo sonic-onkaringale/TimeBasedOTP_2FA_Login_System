@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="color: red"> <th:block th:text="${msg}==null?' ':${msg}"></th:block></div>
+<form action="/register-user" method="post">
+    <table>
+
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td><input required type="email" name="email"></input></td>
+        </tr>
+        <tr>
+            <td><label for="pass">Password</label></td>
+            <td><input required type="password" name="pass"></input></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input  type="submit" value="Submit"></input></td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
